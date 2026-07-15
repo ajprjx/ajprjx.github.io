@@ -24,7 +24,7 @@ body {
 /* ── Two-column layout ── */
 .layout {
   display: grid;
-  grid-template-columns: var(--sidebar-width) 1fr;
+  grid-template-columns: 1fr 2fr;
   min-height: 100vh;
 }
 
@@ -34,7 +34,6 @@ body {
   top: 0;
   height: 100vh;
   overflow-y: auto;
-  border-right: 1px solid var(--border);
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
@@ -79,7 +78,6 @@ body {
   height: 40px;
   border-radius: 50%;
   background: var(--bg-card);
-  border: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,7 +88,6 @@ body {
 }
 .icon-btn:hover {
   color: var(--accent);
-  border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
 }
 .icon-btn svg { width: 18px; height: 18px; }
@@ -120,15 +117,14 @@ body {
 
 .project-card {
   background: var(--bg-card);
-  border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
   text-decoration: none;
   color: var(--text);
   display: block;
-  transition: transform 0.2s, border-color 0.2s;
+  transition: transform 0.2s, opacity 0.2s;
 }
-.project-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+.project-card:hover { transform: translateY(-3px); opacity: 0.85; }
 
 .project-thumb {
   height: 130px;
@@ -154,7 +150,6 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
 }
@@ -166,10 +161,8 @@ body {
   padding: 0.85rem 1.1rem;
   text-decoration: none;
   color: var(--text);
-  border-bottom: 1px solid var(--border);
   transition: background 0.15s;
 }
-.work-item:last-child a { border-bottom: none; }
 .work-item a:hover { background: var(--bg-card); }
 
 .work-name {
@@ -190,7 +183,7 @@ body {
 /* ── Responsive ── */
 @media (max-width: 700px) {
   .layout { grid-template-columns: 1fr; }
-  .sidebar { position: static; height: auto; border-right: none; border-bottom: 1px solid var(--border); }
+  .sidebar { position: static; height: auto; }
   .contact-links { margin-top: 1rem; padding-top: 0; }
   .projects-grid { grid-template-columns: 1fr; }
 }
