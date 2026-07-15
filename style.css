@@ -151,6 +151,44 @@ body {
 .project-body h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.35rem; }
 .project-body p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
 
+/* ── Other Works ── */
+.works-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.work-item a {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.85rem 1.1rem;
+  text-decoration: none;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+.work-item:last-child a { border-bottom: none; }
+.work-item a:hover { background: var(--bg-card); }
+
+.work-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.work-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 /* ── Responsive ── */
 @media (max-width: 700px) {
   .layout { grid-template-columns: 1fr; }
